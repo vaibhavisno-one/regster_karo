@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RegisterKaro - Your trusted partner for compliance business needs" />
+    <title>RegisterKaro - Business Compliance Solutions</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/src/main.jsx" as="script" />
+    <link rel="preload" href="/src/index.css" as="style" />
+    
+    <!-- Font loading optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- PWA meta tags -->
+    <meta name="theme-color" content="#1B3B6B" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Inline critical CSS -->
+    <script>
+      // Add any critical inline scripts here
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+  </body>
+</html>
